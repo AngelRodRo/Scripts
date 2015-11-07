@@ -3,45 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>jQuery UI Autocomplete - Remote JSONP datasource</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-  .ui-autocomplete-loading {
-    background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
-  }
-  #city { width: 25em; }
-  </style>
+  <link rel="stylesheet" href="css/easy-autocomplete.min.css">
+
+   <script src="js/jquery.easy-autocomplete.min.js"></script>
+
+<!-- CSS file -->
+
   <script>
-  var options = {
+     var options = {
+   	    data: ["blue", "green", "pink", "red", "yellow"]
+      };
 
-    url: "http://localhost:8000/getPlaces/da",
-
-    getValue: "name",
-
-    list: {
-      match: {
-        enabled: true
-      }
-    },
-
-    theme: "square"
-  };
-
-  $("#places").easyAutocomplete(options);
+     $("#places").easyAutocomplete(options);
   </script>
 </head>
 <body>
-
-<div class="ui-widget">
-  <label for="city">Your city: </label>
-  <input id="places">
-
-</div>
-
-
-
-
+   <input type="text" id="places">
 </body>
 </html>
